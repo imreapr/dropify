@@ -1,0 +1,50 @@
+{% extends "webapp/header.html" %}
+
+
+{% block content %}
+
+<b>
+
+<pre>
+
+
+                                  DDDDDDDDDDDDD                                                                   iiii     ffffffffffffffff
+                                  D::::::::::::DDD                                                               i::::i   f::::::::::::::::f
+                                  D:::::::::::::::DD                                                              iiii   f::::::::::::::::::f
+                                  DDD:::::DDDDD:::::D                                                                    f::::::fffffff:::::f
+                                    D:::::D    D:::::D rrrrr   rrrrrrrrr      ooooooooooo   ppppp   ppppppppp   iiiiiii  f:::::f       ffffffyyyyyyy           yyyyyyy
+                                    D:::::D     D:::::Dr::::rrr:::::::::r   oo:::::::::::oo p::::ppp:::::::::p  i:::::i  f:::::f              y:::::y         y:::::y
+                                    D:::::D     D:::::Dr:::::::::::::::::r o:::::::::::::::op:::::::::::::::::p  i::::i f:::::::ffffff         y:::::y       y:::::y
+                                    D:::::D     D:::::Drr::::::rrrrr::::::ro:::::ooooo:::::opp::::::ppppp::::::p i::::i f::::::::::::f          y:::::y     y:::::y
+                                    D:::::D     D:::::D r:::::r     r:::::ro::::o     o::::o p:::::p     p:::::p i::::i f::::::::::::f           y:::::y   y:::::y
+                                    D:::::D     D:::::D r:::::r     rrrrrrro::::o     o::::o p:::::p     p:::::p i::::i f:::::::ffffff            y:::::y y:::::y
+                                    D:::::D     D:::::D r:::::r            o::::o     o::::o p:::::p     p:::::p i::::i  f:::::f                   y:::::y:::::y
+                                    D:::::D    D:::::D  r:::::r            o::::o     o::::o p:::::p    p::::::p i::::i  f:::::f                    y:::::::::y
+                                  DDD:::::DDDDD:::::D   r:::::r            o:::::ooooo:::::o p:::::ppppp:::::::pi::::::if:::::::f                    y:::::::y
+                                  D:::::::::::::::DD    r:::::r            o:::::::::::::::o p::::::::::::::::p i::::::if:::::::f                     y:::::y
+                                  D::::::::::::DDD      r:::::r             oo:::::::::::oo  p::::::::::::::pp  i::::::if:::::::f                    y:::::y
+                                  DDDDDDDDDDDDD         rrrrrrr               ooooooooooo    p::::::pppppppp    iiiiiiiifffffffff                   y:::::y
+                                                                                            p:::::p                                               y:::::y
+                                                                                            p:::::p                                               y:::::y
+                                                                                            p:::::::p                                            y:::::y
+                                                                                            p:::::::p                                           y:::::y
+                                                                                            p:::::::p                                          yyyyyyy
+                                                                                            ppppppppp
+
+ </pre>
+
+</b>
+<center>
+<p>
+Welcome to Dropify! Search for a keyword below and we'll find a popular product for you!
+</p>
+
+Keyword: <form method="POST" >
+{{form.as_p}}
+<button type="submit">
+Search
+</button>{% csrf_token %}
+</form>
+
+</center>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "webapp/header.html" %}
+
+
+{% block content %}
+
+<h1>
+  {{text}} Products!
+
+</h1>
+{{form.name}}
+<p>Name: {{name}}</p>
+
+<p>Price: {{price}}</p>
+<p>Orders: {{orders}}</p>
+
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1420_RC05/embed_loader.js">
+</script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"{{text}}","geo":"","time":"today 12-m"}],"category":0,"property":""},
+{"exploreQuery":"q={{text}}&date=today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+
+<div margin="auto">
+<form method="GET" action="http://127.0.0.1:8000/webapp">
+<input type="submit" value="Home">{% csrf_token %}
+</form>
+</div>
+
+<div margin="auto">
+<form method="GET" action="{{ link }}">
+<input type="submit" value="Go To Product">{% csrf_token %}
+</form>
+</div>
+
+<!-- NOT FINISHED feature for iterating product -->
+<!--
+<div>
+<form method="GET">
+<input type="submit" value="Next Product">{% csrf_token %}
+</form>
+</div>
+-->
+
+
+{% endblock %}
